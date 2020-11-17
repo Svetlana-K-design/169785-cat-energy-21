@@ -7,18 +7,18 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-small.png" width="33" height="38" alt="Логотип Кэт энерджи">
       </a>
-      <a class="page-header__name">
+      <a class="page-header__name" href="index.html">
         <img class="page-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Название компании Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>
+            <li class="site-list__item">
+              <a href="index.html">
                 Главная
               </a>
             </li>
@@ -27,8 +27,8 @@
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">
+            <li class="site-list__item  site-list__item--active">
+              <a>
                 Подбор программы
               </a>
             </li>
@@ -37,66 +37,79 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <a class="button promo_button form__link" href="form.html">Подобрать программу</a>
-        </div>
-      </section>
-      <section class="catalog-slim">
-        <div class="catalog-slim__wrapper">
-          <h2 class="catalog-slim__title">Похудение</h2>
-          <p class="catalog-slim__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="catalog-slim_link" href="catalog.html">Каталог slim</a>
-        </div>
-      </section>
-      <section class="catalog-pro">
-        <div class="catalog-pro__wrapper">
-          <h2 class="catalog-pro__title">Набор массы</h2>
-          <p class="catalog-pro__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="catalog-pro_link" href="catalog.html">Каталог pro</a>
-        </div>
-      </section>
-      <section class="description">
-        <div class="description__wrapper">
-          <h2 class="description__title">Как это работает</h2>
-          <ol class="description__list">
-            <li class="description__item">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="description__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="description__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="description__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-          </ol>
-        </div>
-      </section>
-      <section class="stats">
-        <div class="stats__wrapper">
-          <h2 class="stats__title">Живой пример</h2>
-          <p class="stats__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="stats__list">
-            <div class="stats__item">
-              <dt class="stats__number">5 кг</dt>
-              <dd class="stats__description">снижение веса</dd>
-            </div>
-            <div class="stats__item">
-              <dt class="stats__number">60 дней</dt>
-              <dd class="stats__description">затрачено времени</dd>
-            </div>
-          </dl>
-          <p class="stats__price">Затраты на питание: 15 000 РУБ.</p>
-          <div class="stats__slider slider">
-            <img class="stats__cat-image slider__image--current" src="img/cat-before.jpg" width="311" height="232" alt="Фото кота Бориса до перехода на питание от Cat Energy Slim">
-        <!--<img class="stats__cat-image slider__image" src="img/cat-after.jpg" width="251" height="240" alt="Фото кота Бориса после перехода на питание от Cat Energy Slim">-->
-            <div class="stats__range-controls slider-toggles">
-              <button class="slider__toggle slider__toggle--current" type="button">Было</button>
-              <div class="slider__scale">
-                <div class="slider__bar"></div>
-              </div>
-              <button class="slider__toggle" type="button">Стало</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="form__wrapper">
+        <h1 class="form__title">Подбор программы</h1>
+        <p class="form__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="form__worksheet" method="get" action="https://echo.htmlacademy.ru">
+          <p class="worksheet__name">
+            <label class="name-label">Имя:<sup>*</sup><input class="worksheet__input worksheet__input-text" type="text" placeholder="Барсик" required></label>
+          </p>
+          <p class="worksheet__weight">
+            <label>Вес (кг):<sup>*</sup><input class="worksheet__input worksheet__input-text" type="number" placeholder="7" required></label>
+          </p>
+          <p class="worksheet__age">
+            <label>Возраст (лет):<input class="worksheet__input worksheet__input-text" type="number" placeholder="7"></label>
+          </p>
+          <fieldset>
+            <ul class="worksheet__list">
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="slim" id="worksheet-slim">
+                <label for="worksheet-slim">Похудение</label>
+              </li>
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="put-on-weight" id="worksheet-put-on-weight">
+                <label for="worksheet-put-on-weight">Набор массы</label>
+              </li>
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="advice" id="worksheet-advice">
+                <label for="worksheet-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Контактные данные (владельца кота)</legend>
+            <p class="worksheet__mail">
+              <label>
+                <span>E-mail:<sup>*</sup></span>
+                  <input class="worksheet__input worksheet__input-text" type="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+            </p>
+            <p class="worksheet__phone">
+              <label>
+                <span>Телефон:<sup>*</sup></span>
+                  <input class="worksheet__input worksheet__input-text" type="tel" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Комментарий</legend>
+            <textarea class="worksheet__textarea" name="name" rows="8" cols="80">Расскажите обо всех повадках кота</textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <ul class="worksheet__list">
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="sweetener" id="worksheet-sweetener" checked>
+                <label for="worksheet-sweetener">Сахарозаменитель</label>
+              </li>
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="water" id="worksheet-water">
+                <label for="worksheet-water">Питьевая вода</label>
+              </li>
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="milk" id="worksheet-milk">
+                <label for="worksheet-milk">Молоко</label>
+              </li>
+              <li class="worksheet__item">
+                <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="vitamins" id="worksheet-vitamins">
+                <label for="worksheet-vitamins">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button worksheet__button" type="submit">Отправить заявку</button>
+        </form>
+        <p class="form__text"><sup>*</sup>— Обязательные поля</p>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
