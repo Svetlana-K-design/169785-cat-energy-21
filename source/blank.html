@@ -29,7 +29,7 @@
                 </a>
               </li>
               <li class="site-list__item  site-list__item--active">
-                <a>
+                <a href="form.html">
                   Подбор программы
                 </a>
               </li>
@@ -37,85 +37,10 @@
           </div>
         </nav>
       </header>
-      <main class="page-main">
-        <div class="form__wrapper">
-          <h1 class="form__title">Подбор программы</h1>
-          <p class="form__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <form class="form__worksheet" method="get" action="https://echo.htmlacademy.ru">
-            <p class="worksheet__name">
-              <label class="name-label">Имя:<sup>*</sup><input class="worksheet__input worksheet__input-text" type="text" placeholder="Барсик" required></label>
-            </p>
-            <p class="worksheet__weight">
-              <label>Вес (кг):<sup>*</sup><input class="worksheet__input worksheet__input-text" type="text" placeholder="7" required></label>
-            </p>
-            <p class="worksheet__age">
-              <label>Возраст (лет):<input class="worksheet__input worksheet__input-text" type="text" placeholder="7"></label>
-            </p>
-            <fieldset>
-              <ul class="worksheet__list">
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="slim" id="worksheet-slim">
-                  <label for="worksheet-slim">Похудение</label>
-                </li>
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="put-on-weight" id="worksheet-put-on-weight">
-                  <label for="worksheet-put-on-weight">Набор массы</label>
-                </li>
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-radio" type="radio" name="weight-group" value="advice" id="worksheet-advice">
-                  <label for="worksheet-advice">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <legend class="worksheet__legend--contacts">Контактные данные (владельца кота)</legend>
-              <p class="worksheet__mail">
-                <label>
-                  <span>E-mail:<sup>*</sup></span>
-                    <input class="worksheet__input worksheet__input-text" type="email" placeholder="kuklachev@gmail.com" required>
-                </label>
-              </p>
-              <p class="worksheet__phone">
-                <label>
-                  <span>Телефон:<sup>*</sup></span>
-                    <input class="worksheet__input worksheet__input-text" type="tel" placeholder="8 (960) 900-60-90" required>
-                </label>
-              </p>
-            </fieldset>
-            <fieldset>
-              <legend class="worksheet__legend--comment">Комментарий</legend>
-              <textarea class="worksheet__textarea" name="name" rows="8" cols="80">Расскажите обо всех повадках кота</textarea>
-            </fieldset>
-            <fieldset>
-              <legend class="worksheet__legend--add">Дополнительно</legend>
-              <ul class="worksheet__list">
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="sweetener" id="worksheet-sweetener" checked>
-                  <label for="worksheet-sweetener">Сахарозаменитель</label>
-                </li>
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="water" id="worksheet-water">
-                  <label for="worksheet-water">Питьевая вода</label>
-                </li>
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="milk" id="worksheet-milk">
-                  <label for="worksheet-milk">Молоко</label>
-                </li>
-                <li class="worksheet__item">
-                  <input class="visually-hidden worksheet__input worksheet__input-checkbox" type="checkbox" name="vitamins" id="worksheet-vitamins">
-                  <label for="worksheet-vitamins">Витамины</label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="button worksheet__button" type="submit">Отправить заявку</button>
-          </form>
-          <p class="form__text"><sup>*</sup>— Обязательные поля</p>
-        </div>
-      </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <section class="page-footer__contacts">
-            <h2 class="visually-hidden">Котактная информация</h2>
+            <h2 class="visually-hidden">Контактная информация</h2>
             <div class="contacts">
               <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
               <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
