@@ -1,0 +1,49 @@
+$background: #FFFFFF;
+$color-basic: #111111;
+
+@mixin button-text {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button {
+  width: 280px;
+  margin: 0 20px;
+  height: 40px;
+  background-color: $basic-green;
+  text-align: center;
+  color: $background;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+}
+
+.catalog-main__button--catalog {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 0;
+  @include button-text;
+}
+
+.catalog-main__button--add {
+  @include button-text;
+  }
+
+
+.catalog-main__button--more {
+  @include button-text;
+  background-color: $basic-gray;
+  color: $color-basic;
+  }
+
+  .promo_button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }

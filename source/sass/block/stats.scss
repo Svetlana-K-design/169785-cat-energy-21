@@ -1,0 +1,62 @@
+$basic-gray: #F2F2F2;
+
+.stats {
+  background-color: $basic-gray;
+}
+
+.stats__wrapper {
+  width: 280px;
+  margin: 0 20px;
+  min-height: 705px;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+
+.stats__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.stats__text {
+  font-family: Arial;
+  color: $special-dark-gray;
+}
+
+.stats__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.stats__description {
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 12px;
+  padding-top: 10px;
+  color: $special-dark-gray;
+}
+
+.stats__price {
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stats__range-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__toggle {
+  border: none;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
