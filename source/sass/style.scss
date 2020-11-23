@@ -1,1 +1,14 @@
-// Начните писать стили здесь
+@import "css/normalize.css";
+@import "global/fonts";
+@import "global/global";
+@import "global/variables";
+@import "block/page-header";
+@import "block/main-nav";
+@import "block/site-list";
+@import "block/promo";
+@import "global/button";
+@import "block/catalog-slim";
+@import "block/catalog-pro";
+@import "block/description";
+@import "block/stats";
+@import "block/page-footer";

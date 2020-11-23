@@ -1,0 +1,68 @@
+@mixin footer-border {
+  width: 280px;
+  margin: 0 20px;
+}
+
+.contacts,
+.page-footer__wrapper {
+  @include footer-border;
+}
+
+.contacts {
+  min-height: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.contacts__text {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-dark-gray;
+}
+
+.page-footer-main {
+  background-color: $basic-gray;
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-rows: minmax(63px, max-content);
+    .page-footer__name {
+      align-self: center;
+      margin: 0 auto;
+    }
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 101px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.page-footer__copyright-link-block {
+  display: flex;
+  width: 280px;
+  min-height: 65px;
+  justify-content: space-between;
+  align-items: center;
+    .copyright__link {
+      font-family: Arial;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      color:  $special-dark-gray;
+    }
+}
