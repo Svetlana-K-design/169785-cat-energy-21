@@ -3,22 +3,19 @@
   margin: 0 20px;
 }
 
-.page-footer__wrapper {
-  @include footer-border;
-}
-
 .page-footer__main {
   background-color: $basic-gray;
 }
 
 .page-footer__wrapper {
+  @include footer-border;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-rows: minmax(63px, max-content);
-    .page-footer__name {
-      align-self: center;
-      margin: 0 auto;
-    }
+}
+
+.page-footer__name {
+  align-self: center;
+  margin: 0 auto;
 }
 
 .page-footer__copyright-link-block {
@@ -27,11 +24,4 @@
   min-height: 65px;
   justify-content: space-between;
   align-items: center;
-    .copyright__link {
-      font-family: Arial;
-      font-size: 16px;
-      line-height: 18px;
-      font-weight: 400;
-      color:  $special-dark-gray;
-    }
 }

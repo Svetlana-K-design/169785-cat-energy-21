@@ -1,4 +1,4 @@
- @mixin label-text{
+@mixin label-text {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -25,7 +25,7 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   padding-left: 14px;
 
   &--name {
@@ -90,7 +90,7 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   padding-top: 10px;
   padding-left: 15px;
   color: $special-dark-gray;

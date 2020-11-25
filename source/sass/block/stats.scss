@@ -1,4 +1,4 @@
-$basic-gray: #F2F2F2;
+$basic-gray: #f2f2f2;
 
 .stats {
   background-color: $basic-gray;
@@ -19,7 +19,7 @@ $basic-gray: #F2F2F2;
 }
 
 .stats__text {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   color: $special-dark-gray;
 }
 
@@ -35,7 +35,7 @@ $basic-gray: #F2F2F2;
 }
 
 .stats__description {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   padding-top: 10px;
@@ -55,7 +55,7 @@ $basic-gray: #F2F2F2;
 
 .slider__toggle {
   border: none;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
