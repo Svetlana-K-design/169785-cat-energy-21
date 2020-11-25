@@ -3,7 +3,7 @@ $background: #FFFFFF;
 
 .page__body {
   min-width: 280px;
-  height: auto;
+  height: 100%;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -13,6 +13,7 @@ $background: #FFFFFF;
 
   .page__body-container {
     width: 320px;
+    height: 100%;
     margin: 0 auto;
   }
 }
@@ -39,10 +40,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-ul,
-ol {
-  list-style: none;
-  padding: 0;
 }

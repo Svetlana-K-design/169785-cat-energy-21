@@ -28,10 +28,15 @@ $color-basic: #111111;
   @include button-text;
 }
 
-.catalog-main__button--add {
+.catalog-main__button--add,
+.button__worksheet {
   @include button-text;
-  }
+}
 
+.button__worksheet  {
+  width: 280px;
+  margin: 0 auto;
+}
 
 .catalog-main__button--more {
   @include button-text;

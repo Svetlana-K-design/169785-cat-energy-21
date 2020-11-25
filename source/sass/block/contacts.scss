@@ -1,0 +1,21 @@
+.contacts {
+  @include footer-border;
+  min-height: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.contacts__text {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-dark-gray;
+}
