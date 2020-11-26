@@ -1,8 +1,8 @@
-$background: #FFFFFF;
+$background: #ffffff;
 $color-basic: #111111;
 
 @mixin button-text {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -22,28 +22,33 @@ $color-basic: #111111;
 }
 
 .catalog-main__button--catalog {
+  @include button-text;
   display: inline-block;
   box-sizing: border-box;
   padding: 10px 0;
+}
+
+.catalog-main__button--add,
+.button__worksheet {
   @include button-text;
 }
 
-.catalog-main__button--add {
-  @include button-text;
-  }
-
+.button__worksheet {
+  width: 280px;
+  margin: 0 auto;
+}
 
 .catalog-main__button--more {
   @include button-text;
   background-color: $basic-gray;
   color: $color-basic;
-  }
+}
 
-  .promo_button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
+.promo_button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 0;
+}

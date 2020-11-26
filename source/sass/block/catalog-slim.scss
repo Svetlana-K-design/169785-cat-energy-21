@@ -1,4 +1,4 @@
-$basic-gray: #F2F2F2;
+$basic-gray: #f2f2f2;
 $text-promo-catalog: #444444;
 
 .catalog-slim {
@@ -24,7 +24,7 @@ $text-promo-catalog: #444444;
 }
 
 .catalog-slim__text {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $text-promo-catalog;

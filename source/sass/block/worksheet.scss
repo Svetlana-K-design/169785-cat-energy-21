@@ -1,0 +1,108 @@
+@mixin label-text {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $special-dark-gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.worksheet__name,
+.worksheet__weight,
+.worksheet__age,
+.worksheet__mail,
+.worksheet__phone {
+  @include label-text;
+}
+
+.worksheet__input {
+  height: 46px;
+  border: 1px solid $light-gray-border;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  padding-left: 14px;
+
+  &--name {
+    width: 229px;
+  }
+
+  &--weight,
+  &--phone {
+    width: 204px;
+  }
+
+  &--age {
+    width: 172px;
+  }
+
+  &--email {
+    width: 219px;
+  }
+}
+
+.worksheet__list {
+  margin-top: 20px;
+}
+
+.worksheet__item {
+  @include label-text;
+  padding-bottom: 25px;
+
+  .worksheet__label--radio,
+  .worksheet__label {
+    padding-left: 20px;
+  }
+}
+
+.worksheet__label--radio,
+.worksheet__label {
+  position: relative;
+}
+
+.worksheet__input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $light-gray-radio;
+  border-radius: 50%;
+}
+
+.worksheet__legend {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.worksheet__textarea {
+  margin-top: 10px;
+  border: 1px solid $light-gray-border;
+  resize: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  padding-top: 10px;
+  padding-left: 15px;
+  color: $special-dark-gray;
+}
+
+
+.worksheet__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $light-gray-radio;
+}
