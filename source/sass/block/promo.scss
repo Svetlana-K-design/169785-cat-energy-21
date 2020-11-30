@@ -5,11 +5,9 @@ $background: #ffffff;
   width: 320px;
   min-height: 480px;
   position: relative;
-  align-content: center;
   text-align: center;
   color: $background;
   background: url("../img/background-cat.jpg") no-repeat;
-
 
   .promo__wrapper {
     min-height: 302px;
@@ -37,4 +35,25 @@ $background: #ffffff;
   position: absolute;
   bottom: 40px;
   left: 40px;
+}
+
+.promo__gift {
+  width: 280px;
+  min-height: 289px;
+  text-align: center;
+  color: $background;
+  background: url("../img/gift-cat.jpg") no-repeat;
+  background-color: $basic-green;
+  margin-top: 32px;
+  margin-bottom: 42px;
+}
+
+.promo__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 193px 60px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
 }

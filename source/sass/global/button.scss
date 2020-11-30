@@ -9,7 +9,7 @@ $color-basic: #111111;
 
 .button {
   width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
   height: 40px;
   background-color: $basic-green;
   text-align: center;
@@ -21,14 +21,14 @@ $color-basic: #111111;
   border: none;
 }
 
-.catalog-main__button--catalog {
+.button__catalog-main--catalog {
   @include button-text;
   display: inline-block;
   box-sizing: border-box;
   padding: 10px 0;
 }
 
-.catalog-main__button--add,
+.button__catalog-main--add,
 .button__worksheet {
   @include button-text;
 }
@@ -38,16 +38,18 @@ $color-basic: #111111;
   margin: 0 auto;
 }
 
-.catalog-main__button--more {
+.button__catalog-main--more {
   @include button-text;
   background-color: $basic-gray;
-  color: $color-basic;
+  height: 60px;
+  color: $special-dark-gray;
+  margin-bottom: 5px;
 }
 
 .promo_button {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 20px;
   display: inline-block;
   box-sizing: border-box;
   padding: 10px 0;

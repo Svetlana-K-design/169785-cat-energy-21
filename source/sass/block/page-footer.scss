@@ -10,7 +10,8 @@
 .page-footer__wrapper {
   @include footer-border;
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 93px 63px 78px;
+  align-items: center;
 }
 
 .page-footer__name {
@@ -24,4 +25,8 @@
   min-height: 65px;
   justify-content: space-between;
   align-items: center;
+}
+
+.page-footer__contacts--inner {
+  background-color: $basic-gray;
 }
