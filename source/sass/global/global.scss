@@ -1,20 +1,40 @@
 $color-basic: #111111;
 $background: #ffffff;
+$background-promo: rgba(104, 183, 56, 0.85);
 
 .page__body {
-  min-width: 280px;
-  height: 100%;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: $color-basic;
   background-color: $background;
+  margin: 0;
+
+  @media (min-width: 1440px) {
+    &--main {
+      background-image: url("../img/rectangle.png"), url("../img/background-cat-large.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
+  }
 
   .page__body-container {
-    width: 320px;
+    min-width: 320px;
     height: 100%;
     margin: 0 auto;
+
+    @media (min-width: 768px) {
+      min-width: 768px;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1440px) {
+      min-width: 1440px;
+      height: 100%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -26,7 +46,6 @@ $background: #ffffff;
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;

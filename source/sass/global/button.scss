@@ -46,11 +46,21 @@ $color-basic: #111111;
   margin-bottom: 5px;
 }
 
-.promo_button {
+.button__promo-main {
   position: absolute;
   bottom: 0;
   left: 20px;
   display: inline-block;
   box-sizing: border-box;
   padding: 10px 0;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    font-size: 20px;
+    width: 229px;
+    height: 54px;
+    padding: 15px 0;
+  }
 }

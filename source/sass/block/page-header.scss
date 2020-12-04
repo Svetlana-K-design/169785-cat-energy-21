@@ -1,9 +1,26 @@
 .page-header {
-  width: 280px;
+  min-width: 280px;
   margin: 0 20px;
   min-height: 66px;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 768px) {
+    min-width: 708px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 1220px;
+    margin: 0 110px;
+    margin-top: 45px;
+  }
+}
+
+.page-header__name {
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

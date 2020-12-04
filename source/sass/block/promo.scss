@@ -2,12 +2,24 @@ $color-basic: #111111;
 $background: #ffffff;
 
 .promo {
-  width: 320px;
   min-height: 480px;
   position: relative;
   text-align: center;
   color: $background;
   background: url("../img/background-cat.jpg") no-repeat;
+  background-position: top right;
+
+  @media (min-width: 768px) {
+    position: relative;
+    margin: 0 150px;
+    background: none;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 585px;
+    position: relative;
+    margin-left: 190px;
+  }
 
   .promo__wrapper {
     min-height: 302px;
@@ -16,10 +28,32 @@ $background: #ffffff;
     box-shadow: $shadow-promo;
     padding-top: 5px;
 
+    @media (min-width: 768px) {
+      background-color: $background;
+      color: $color-basic;
+      box-shadow: none;
+      text-align: left;
+    }
+
+    @media (min-width: 1440px) {
+      width: 500px;
+    }
+
     .promo__title {
       font-size: 36px;
       line-height: 36px;
       font-weight: 400;
+
+      @media (min-width: 768px) {
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      span {
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
     }
 
     .promo__slogan {
@@ -27,14 +61,37 @@ $background: #ffffff;
       line-height: 14px;
       font-weight: 400;
       text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
   }
 }
 
 .promo__image {
+  width: 280px;
+  height: 270px;
   position: absolute;
   bottom: 40px;
   left: 40px;
+
+  @media (min-width: 768px) {
+    width: 709px;
+    height: auto;
+    position: static;
+    z-index: 0;
+    margin-left: 5px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 552px;
+    height: auto;
+    position: absolute;
+    left: 365px;
+    top: 10px;
+  }
 }
 
 .promo__gift {
