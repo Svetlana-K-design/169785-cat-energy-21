@@ -1,13 +1,39 @@
 .form__wrapper {
   width: 280px;
-  height: auto;
   margin: 0 20px;
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 628px;
+    margin: 0 70px;
+    position: relative;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1220px;
+    margin: 0 110px;
+    position: relative;
+  }
 }
 
 .form__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 64px 0 54px -40px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 73px 0 56px 0;
+  }
 }
 
 .form__subtitle {
@@ -15,11 +41,22 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
 
-.form__wrapper fieldset {
-  border: none;
-  padding: 0;
+.form__worksheet {
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .form__text {
@@ -28,4 +65,15 @@
   line-height: 16px;
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    position: absolute;
+    right: 90px;
+    bottom: 70px;
+  }
+
+  @media (min-width: 1440px) {
+    right: 390px;
+  }
 }

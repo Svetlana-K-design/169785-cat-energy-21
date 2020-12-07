@@ -37,16 +37,16 @@
   margin: 0;
 
   @media (min-width: 768px) {
+    width: 88%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 0;
     counter-reset: myCounter;
   }
 
-  @media (min-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @media (min-width: 1440px) {
+    width: 100%;
   }
 }
 
@@ -67,10 +67,6 @@
       display: block;
     }
 
-    &:nth-child(2n) {
-      margin-left: 153px;
-    }
-
     &:last-child {
       width: 250px;
     }
@@ -89,15 +85,10 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     position: relative;
     margin: 0;
-    min-height: 240px;
     padding-top: 115px;
-
-    &:nth-child(2n) {
-      margin-left: 0;
-    }
 
     &::after {
       position: absolute;

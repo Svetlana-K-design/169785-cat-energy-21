@@ -36,6 +36,20 @@ $color-basic: #111111;
 .button__worksheet {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 282px;
+    height: 52px;
+    font-size: 20px;
+    margin-top: 54px;
+    margin-bottom: 72px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 568px;
+  }
 }
 
 .button__catalog-main--more {
