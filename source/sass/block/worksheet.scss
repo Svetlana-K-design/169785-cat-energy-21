@@ -7,6 +7,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .worksheet__name,
@@ -15,6 +21,12 @@
 .worksheet__mail,
 .worksheet__phone {
   @include label-text;
+}
+
+.worksheet__mail {
+  @media (min-width: 1440px) {
+    margin-right: 80px;
+  }
 }
 
 .worksheet__input {
@@ -27,59 +39,327 @@
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
   padding-left: 14px;
+  color: $special-dark-gray;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+    height: 52px;
+  }
 
   &--name {
-    width: 229px;
+    width: 228px;
+
+    @media (min-width: 768px) {
+      width: 566px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 506px;
+    }
   }
 
   &--weight,
   &--phone {
     width: 204px;
+    margin-left: 9px;
+
+    @media (min-width: 768px) {
+      width: 535px;
+      margin-left: 14px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 475px;
+    }
   }
 
   &--age {
-    width: 172px;
+    width: 171px;
+
+    @media (min-width: 768px) {
+      width: 496px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 436px;
+    }
   }
 
   &--email {
-    width: 219px;
+    width: 218px;
+
+    @media (min-width: 768px) {
+      width: 550px;
+      margin-left: 20px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 486px;
+      margin-left: 0;
+    }
+  }
+}
+
+.worksheet__extra {
+  @media (min-width: 1440px) {
+    width: 100%;
   }
 }
 
 .worksheet__list {
   margin-top: 20px;
+
+  &--catalog-extra {
+    @media (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }
 
 .worksheet__item {
   @include label-text;
   padding-bottom: 25px;
 
-  .worksheet__label--radio,
-  .worksheet__label {
-    padding-left: 20px;
+  &--catalog-extra {
+    @media (min-width: 768px) {
+      width: 40%;
+      padding-bottom: 42px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 19%;
+    }
   }
 }
 
-.worksheet__label--radio,
 .worksheet__label {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.worksheet__label--radio {
   position: relative;
+  color: $special-dark-gray-option;
+  padding-left: 20px;
+
+  @media (min-width: 768px) {
+    padding-left: 30px;
+  }
 }
 
 .worksheet__input-radio + label::before {
   content: "";
   position: absolute;
   left: -40px;
-  top: -10px;
+  top: -5px;
   width: 30px;
   height: 30px;
   border: 1px solid $light-gray-radio;
   border-radius: 50%;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.worksheet__input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  background-color: $basic-green;
+  border-radius: 50%;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: -28px;
+    top: 7px;
+  }
 }
 
 .worksheet__legend {
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+
+    &--contacts {
+      position: relative;
+      margin-bottom: 76px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -72px;
+        top: 20px;
+        width: 30px;
+        height: 2px;
+        background-color: $basic-green;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -180px;
+        top: 20px;
+        width: 145px;
+        height: 2px;
+        background-color: $basic-green;
+      }
+    }
+  }
+}
+
+.worksheet__legend--contacts {
+  margin-bottom: 32px;
+
+  @media (min-width: 1440px) {
+    &::before {
+      left: -111px;
+      top: 20px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 548px;
+      top: 20px;
+      width: 778px;
+    }
+  }
+}
+
+.worksheet__contacts,
+.worksheet__comments {
+  @media (min-width: 768px) {
+    margin-bottom: 65px;
+  }
+}
+
+.worksheet__legend--comment {
+  position: relative;
+  margin-bottom: 27px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -174px;
+    top: 15px;
+    width: 158px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -72px;
+      top: 20px;
+      width: 30px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 225px;
+      top: 20px;
+      width: 472px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &::before {
+      left: -111px;
+      top: 20px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 219px;
+      top: 20px;
+      width: 1108px;
+    }
+  }
+}
+
+.worksheet__legend--add {
+  position: relative;
+  margin-bottom: 27px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -153px;
+    top: 15px;
+    width: 136px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 57px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -72px;
+      top: 20px;
+      width: 30px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 250px;
+      top: 20px;
+      width: 446px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &::before {
+      left: -111px;
+      top: 20px;
+      width: 70px;
+    }
+
+    &::after {
+      left: 260px;
+      top: 20px;
+      width: 1078px;
+    }
+  }
 }
 
 .worksheet__textarea {
@@ -94,8 +374,98 @@
   padding-top: 10px;
   padding-left: 15px;
   color: $special-dark-gray;
+  width: 93%;
+  min-height: 150px;
+
+  @media (min-width: 768px) {
+    width: 98%;
+    min-height: 173px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
+/*Flex*/
+.worksheet__first-block {
+  @media (min-width: 1440px) {
+    width: 47%;
+    min-height: 200px;
+    margin-bottom: 69px;
+  }
+}
+
+.worksheet__comments {
+  @media (min-width: 1440px) {
+    width: 100%;
+  }
+}
+
+.worksheet__contacts {
+  @media (min-width: 1440px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.worksheet__programm {
+  position: relative;
+  margin-top: 27px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 1px;
+    background-color: $light-gray-border;
+    position: absolute;
+    left: -20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 1px;
+    background-color: $light-gray-border;
+    position: absolute;
+    left: -20px;
+    bottom: 10px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 72px;
+    margin-bottom: 71px;
+    min-height: 200px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .worksheet__list {
+      border: 1px solid $light-gray-border;
+      padding-top: 25px;
+      padding-left: 68px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 47%;
+      margin: 0;
+      margin-bottom: 69px;
+    }
+  }
+}
+
+.worksheet__label--checkbox {
+  position: relative;
+  color: $color-basic;
+  padding-left: 20px;
+
+  @media (min-width: 768px) {
+    padding-left: 30px;
+  }
+}
 
 .worksheet__input-checkbox + label::before {
   content: "";
@@ -105,4 +475,25 @@
   width: 30px;
   height: 30px;
   border: 1px solid $light-gray-radio;
+
+  @media (min-width: 768px) {
+    top: -5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.worksheet__input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: -1px;
+  width: 18px;
+  height: 14px;
+  background: url("../img/icon/vector-check.svg") no-repeat;
+
+  @media (min-width: 768px) {
+    top: 8px;
+    left: -27px;
+  }
 }
