@@ -1,6 +1,20 @@
 .page-main__catalog-wrapper {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 708px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1220px;
+    margin: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
 }
 
 .page-main__title {
@@ -19,5 +33,14 @@
     height: 1px;
     background-color: $light-gray-border-catalog;
     margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+
+    &::after {
+      display: none;
+    }
   }
 }
