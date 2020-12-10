@@ -26,6 +26,15 @@ $color-basic: #111111;
   display: inline-block;
   box-sizing: border-box;
   padding: 10px 0;
+
+  @media (min-width: 768px) {
+    width: 248px;
+    margin-top: 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 168px;
+  }
 }
 
 .button__catalog-main--add,
@@ -58,6 +67,29 @@ $color-basic: #111111;
   height: 60px;
   color: $special-dark-gray;
   margin-bottom: 5px;
+
+  @media (min-width: 768px) {
+    margin-bottom: -20px;
+    width: 248px;
+    height: 40px;
+    padding: 10px 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 168px;
+    margin-bottom: -12px;
+  }
+}
+
+.button__catalog-main--add {
+  @media (min-width: 768px) {
+    width: 632px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 224px;
+    margin: 0;
+  }
 }
 
 .button__promo-main {

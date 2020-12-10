@@ -2,6 +2,16 @@
   margin-bottom: 10px;
 }
 
+.catalog-add__wrapper {
+  @media (min-width: 768px) {
+    margin: 0 38px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
+}
+
 .catalog-add__list {
   list-style: none;
   margin: 0;
@@ -20,6 +30,26 @@
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 20px;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-auto-rows: auto auto;
+  }
+
+  @media (min-width: 1440px) {
+    width: 896px;
+    grid-template-columns: 325px auto 244px;
+    height: 72px;
+    align-items: center;
+    padding-bottom: 0;
   }
 }
 
@@ -28,6 +58,17 @@
   line-height: 24px;
   font-weight: 400;
   position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: -23px;
+    width: 320px;
+    height: 1px;
+    background-color: $light-gray-border-catalog;
+  }
 
   &::after {
     content: "";
@@ -39,6 +80,43 @@
     height: 2px;
     background-color: $basic-green;
   }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      left: -68px;
+      top: 20px;
+      width: 30px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      right: -68px;
+      top: 20px;
+      width: 328px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 60px;
+
+    &::before {
+      left: -110px;
+      top: 20px;
+      width: 70px;
+      height: 2px;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      left: 434px;
+      top: 20px;
+      width: 957px;
+    }
+  }
 }
 
 .catalog-add__subtitle {
@@ -47,14 +125,29 @@
   font-weight: 400;
   text-transform: uppercase;
   grid-column: -1/1;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+    grid-column: 1;
+  }
 }
 
 .catalog-add__button {
   grid-column: -1/1;
   margin-top: 15px;
   margin-bottom: 10px;
+
+  @media (min-width: 1440px) {
+    grid-column: 3;
+    justify-self: end;
+  }
 }
 
 .catalog-add__price {
   justify-self: end;
+
+  @media (min-width: 1440px) {
+    grid-column: 2;
+  }
 }
