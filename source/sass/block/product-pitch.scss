@@ -2,12 +2,11 @@ $basic-gray: #f2f2f2;
 $special-dark-gray: #444444;
 
 .product-pitch__wrapper {
-  min-height: 266px;
+  min-height: 267px;
   background-color: $basic-gray;
-  margin: 10px 20px;
+  margin: 0 20px;
   padding-left: 20px;
   padding-right: 33px;
-  padding-top: 5px;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
@@ -19,6 +18,9 @@ $special-dark-gray: #444444;
 
   @media (min-width: 1440px) {
     width: 570px;
+    margin-top: 38px;
+    margin-bottom: 27px;
+    padding-right: 27px;
   }
 }
 
@@ -26,7 +28,7 @@ $special-dark-gray: #444444;
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
-    min-height: 374px;
+    min-height: 380px;
     margin: 0 80px;
   }
 }
@@ -36,21 +38,45 @@ $special-dark-gray: #444444;
   line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
+  padding-top: 32px;
+  padding-left: 72px;
 
   @media (min-width: 768px) {
     font-size: 36px;
+    padding-top: 76px;
+    padding-left: 1px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 46px;
+    padding-left: 161px;
+    margin-bottom: 74px;
   }
 }
 
 .product-pitch__text {
+  min-width: 240px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $special-dark-gray;
+  padding-top: 9px;
+  padding-bottom: 21px;
+  margin-bottom: 19px;
+  border-bottom: 1px solid $light-gray-footer;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 33px;
   }
 }
 
@@ -58,6 +84,7 @@ $special-dark-gray: #444444;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  position: relative;
 
   @media (min-width: 768px) {
     font-size: 20px;

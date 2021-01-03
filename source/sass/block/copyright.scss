@@ -4,4 +4,16 @@
   line-height: 18px;
   font-weight: 400;
   color: $special-dark-gray;
+
+  &:first-child {
+    padding-bottom: 4px;
+  }
+
+  &:hover:not(:first-child) path {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
