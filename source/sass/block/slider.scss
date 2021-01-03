@@ -4,6 +4,11 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &--current {
+    padding-left: 23px;
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -12,17 +17,47 @@
 
     &::after {
       content: "";
+      width: auto;
       display: block;
-      width: 47px;
-      height: 1px;
       border-bottom: dotted 1px $light-gray-radio;
     }
   }
 }
 
+.slider__toggle:hover {
+  padding-bottom: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: auto;
+    border-bottom: solid 1px $black-basic;
+  }
+}
+
+.slider__toggle:active {
+  outline: none;
+  decoration: none;
+
+  &::after {
+    display: none;
+  }
+}
+
+.slider__toggle:focus {
+  outline: none;
+  decoration: none;
+}
+
+@media (min-width: 768px) {
+  .slider__toggle--current {
+    padding-left: 0;
+  }
+}
+
 .slider__scale {
   width: 84px;
-  height: 14px;
+  height: 12px;
   background-color: $background;
   border: 1px solid $light-gray-radio;
   border-radius: 6px;
@@ -31,12 +66,14 @@
     width: 35px;
     height: 6px;
     background-color: $basic-green;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin-top: 3px;
+    margin-left: 5px;
     border-radius: 6px;
   }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .slider__scale {
     width: 428px;
     height: 6px;
     background-color: $light-gray-radio;
@@ -46,9 +83,18 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      border: 20px solid $background;
-      box-shadow: 0 1px 3px 0 $light-gray-radio;
-      margin: -20px auto;
+      border: 13px solid $background;
+      box-shadow: 0 0 0 1px $light-gray-radio, 0 1px 3px 0 $dark-opacity-first;
+      margin: -16px 201px;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 0 1px $light-gray-radio, 0 2px 4px 0 $dark-opacity-second;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 1px $basic-green, 0 3px 5px 0 $dark-opacity-third;
+      }
     }
   }
 }

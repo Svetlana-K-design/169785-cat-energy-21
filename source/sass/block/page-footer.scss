@@ -15,13 +15,13 @@
 .page-footer__wrapper {
   @include footer-border;
   display: grid;
-  grid-template-rows: 93px 63px 78px;
+  grid-template-rows: 93px 63px 79px;
   align-items: center;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    min-height: 150px;
+    min-height: 136px;
     margin: 0 30px;
   }
 
@@ -33,6 +33,7 @@
 .page-footer__name {
   align-self: center;
   margin: 0 auto;
+  margin-top: 5px;
 
   @media (min-width: 768px) {
     margin: 0;
@@ -49,14 +50,14 @@
 
 .page-footer__copyright-link-block {
   display: flex;
-  min-height: 65px;
+  min-height: 80px;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid $light-gray-footer;
 
   @media (min-width: 768px) {
     border-top: none;
-    width: 163px;
+    width: 164px;
   }
 }
 
