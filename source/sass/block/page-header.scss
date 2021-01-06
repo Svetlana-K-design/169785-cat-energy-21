@@ -34,6 +34,17 @@
   }
 }
 
+.page-header__logo--inner,
+.page-header__name {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-header__name {
   padding-top: 18px;
   margin-right: 32px;
@@ -45,4 +56,8 @@
 
 .page-header .main-nav--opened {
   min-height: 244px;
+
+  @media (min-width: 768px) {
+    min-height: auto;
+  }
 }

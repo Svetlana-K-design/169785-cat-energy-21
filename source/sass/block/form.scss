@@ -1,10 +1,15 @@
 .form__wrapper {
   width: 280px;
   margin: 0 auto;
+  padding-bottom: 17px;
 
   fieldset {
     border: none;
     padding: 0;
+  }
+
+  span {
+    margin-top: 5px;
   }
 
   @media (min-width: 768px) {
@@ -24,15 +29,16 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  padding-top: 20px;
 
   @media (min-width: 768px) {
     font-size: 60px;
     line-height: 60px;
-    margin: 64px 0 54px -40px;
+    margin: 26px 0 42px -1px;
   }
 
   @media (min-width: 1440px) {
-    margin: 73px 0 56px 0;
+    margin: 37px 0 45px 0;
   }
 }
 
@@ -41,11 +47,12 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  padding-top: 11px;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 66px;
+    margin-bottom: 37px;
   }
 }
 
@@ -65,15 +72,21 @@
   line-height: 16px;
   font-weight: 400;
   text-align: center;
+  padding-top: 8px;
+
+  span {
+    padding-right: 4px;
+  }
 
   @media (min-width: 768px) {
     font-size: 16px;
     position: absolute;
-    right: 90px;
-    bottom: 70px;
+    right: 104px;
+    bottom: 32px;
   }
 
   @media (min-width: 1440px) {
     right: 390px;
+    bottom: 85px;
   }
 }
