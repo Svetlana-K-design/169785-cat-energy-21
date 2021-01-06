@@ -10,14 +10,7 @@ $background-promo: rgba(104, 183, 56, 0.85);
   color: $color-basic;
   background-color: $background;
   margin: 0;
-
-  @media (min-width: 1440px) {
-    &--main {
-      background-image: url("../img/rectangle.png"), url("../img/background-cat-large.jpg");
-      background-repeat: no-repeat;
-      background-position: right top;
-    }
-  }
+  padding: 0;
 
   .page__body-container {
     max-width: 320px;
@@ -34,6 +27,19 @@ $background-promo: rgba(104, 183, 56, 0.85);
       max-width: 1440px;
       height: 100%;
       margin: 0 auto;
+      position: relative;
+
+      &--main::before {
+        content: "";
+        width: 50%;
+        height: 694px;
+        background-image: url("../img/rectangle.png"), url("../img/background-cat-large.jpg");
+        background-repeat: no-repeat;
+        top: -26px;
+        right: 0;
+        z-index: -1;
+        position: absolute;
+      }
     }
   }
 }

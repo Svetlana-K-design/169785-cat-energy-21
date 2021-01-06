@@ -27,6 +27,7 @@
 
   @media (min-width: 1440px) {
     margin: 0 110px;
+    min-height: 144px;
   }
 }
 
@@ -34,6 +35,16 @@
   align-self: center;
   margin: 0 auto;
   margin-top: 5px;
+
+  &--inner:hover {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 
   @media (min-width: 768px) {
     margin: 0;
