@@ -4,6 +4,7 @@
 
 .page-footer__main {
   background-color: $basic-gray;
+  min-height: 150px;
 }
 
 .page-footer__contacts {
@@ -21,8 +22,9 @@
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    min-height: 136px;
+    align-self: flex-end;
     margin: 0 30px;
+    height: 136px;
   }
 
   @media (min-width: 1440px) {

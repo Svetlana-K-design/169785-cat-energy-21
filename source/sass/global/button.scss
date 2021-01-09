@@ -75,12 +75,24 @@ $color-basic: #111111;
 .button__catalog-main--more {
   @include button-text;
   background-color: $basic-gray;
-  height: 60px;
   color: $special-dark-gray;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+
+  &:hover {
+    background-color: $light-gray-border-catalog;
+  }
+
+  &:active {
+    color: $special-dark-gray-opacity;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
 
   @media (min-width: 768px) {
-    margin-bottom: -20px;
+    margin-bottom: -3px;
     width: 248px;
     height: 40px;
     padding: 10px 0;
@@ -88,7 +100,7 @@ $color-basic: #111111;
 
   @media (min-width: 1440px) {
     width: 168px;
-    margin-bottom: -12px;
+    margin-bottom: -2px;
   }
 }
 
@@ -98,8 +110,7 @@ $color-basic: #111111;
   }
 
   @media (min-width: 1440px) {
-    width: 224px;
-    margin: 0;
+    width: 245px;
   }
 }
 

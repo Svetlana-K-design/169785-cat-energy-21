@@ -6,8 +6,12 @@
   align-items: center;
 
   @media (min-width: 768px) {
-    margin: 43px 71px;
-    padding-top: 43px;
+    margin: 42px 73px;
+
+    &__inner {
+      margin: 43px 71px;
+      padding-top: 43px;
+    }
   }
 
   @media (min-width: 1440px) {
@@ -73,11 +77,11 @@
 }
 
 .contacts__map {
-  min-width: 100%;
+  width: 100%;
   height: 362px;
 
   @media (min-width: 768px) {
-    min-width: 100%;
+    width: 100%;
     height: 400px;
   }
 

@@ -126,17 +126,19 @@ $background: #ffffff;
   height: 289px;
   text-align: center;
   color: $background;
-  background: url("../img/gift-cat.jpg") no-repeat;
+  background: url("../img/icon/icon-gift.svg") no-repeat 50% 27%, url("../img/gift-cat.jpg") no-repeat;
   background-color: $basic-green;
-  margin-top: 32px;
-  margin-bottom: 42px;
+  margin-top: 39px;
+  margin-bottom: 35px;
 
   @media (min-width: 768px) {
     width: 708px;
     height: 200px;
-    background: url("../img/gift-cat-medium.jpg") no-repeat;
+    background: url("../img/icon/icon-gift.svg") no-repeat 12.5% 48%, url("../img/gift-cat-medium.jpg") no-repeat;
     background-color: $basic-green;
     text-align: left;
+    margin-top: 73px;
+    margin-bottom: 76px;
   }
 
   @media (min-width: 1440px) {
@@ -144,10 +146,10 @@ $background: #ffffff;
     height: 289px;
     text-align: center;
     color: $background;
-    background: url("../img/gift-cat.jpg") no-repeat -13px 0;
+    background: url("../img/icon/icon-gift.svg") no-repeat 51% 27%, url("../img/gift-cat.jpg") no-repeat -13px 0;
     background-color: $basic-green;
-    margin-bottom: 0;
-    margin-top: 130px;
+    margin-top: 173px;
+    margin-bottom: 26px;
   }
 }
 
@@ -156,15 +158,15 @@ $background: #ffffff;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  padding: 193px 0 60px 0;
+  padding: 187px 0 60px 0;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    padding-top: 80px;
-    padding-left: 415px;
+    padding-top: 72px;
+    padding-left: 424px;
   }
 
   @media (min-width: 1440px) {
-    padding-left: 0;
+    padding: 171px 0 0 0;
   }
 }
