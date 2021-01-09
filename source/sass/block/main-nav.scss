@@ -6,6 +6,11 @@
   @media (min-width: 768px) {
     position: inherit;
     margin-top: 20px;
+
+    &--catalog {
+      margin-top: 17px;
+      padding-right: 2px;
+    }
   }
 }
 

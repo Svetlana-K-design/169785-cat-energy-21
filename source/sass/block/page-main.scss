@@ -35,6 +35,17 @@
     margin: 0 auto;
   }
 
+  &--catalog {
+    margin-top: 42px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: -20px;
+      top: -28px;
+    }
+  }
+
   @media (min-width: 768px) {
     font-size: 60px;
     line-height: 60px;
@@ -42,5 +53,11 @@
     &::after {
       display: none;
     }
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-main__title--catalog {
+    margin-top: 52px;
   }
 }

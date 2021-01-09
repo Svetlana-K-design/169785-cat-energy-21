@@ -8,20 +8,20 @@
 </head>
 <body class="page__body">
   <div class="page__body-container">
-    <header class="page-header">
-      <a class="page-header__logo" href="index.html">
+    <header class="page-header page-header__inner page-header__inner--catalog">
+      <a class="page-header__logo page-header__logo--inner" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-large.png 1x, img/logo-large@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-medium.png 1x, img/logo-medium@2x.png 2x">
-          <img class="page-header__logo-image" src="img/logo-small.png 1x" srcset="img/logo-small@2x.png 2x" alt="Логотип Кэт энерджи">
-        </picture>
+            <source media="(min-width: 768px)" srcset="img/logo-medium.png 1x, img/logo-medium@2x.png 2x">
+              <img class="page-header__logo-image" src="img/logo-small.png" srcset="img/logo-small@2x.png 2x" alt="Логотип Кэт энерджи">
+            </picture>
       </a>
       <a class="page-header__name" href="index.html">
         <img class="page-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Название компании Кэт энерджи">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--catalog">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">
@@ -42,6 +42,22 @@
         </div>
       </nav>
     </header>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+    </script>
     <main class="page-main">
       <div class="page-main__catalog-wrapper">
         <h1 class="page-main__title page-main__title--catalog">Каталог продукции</h1>
@@ -52,7 +68,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/chicken-medium.png 1x, img/products/chicken-medium@2x.png 2x">
-                  <img src="img/products/chicken-small.png" srcset="img/products/chicken-small@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом курицы">
+                  <img class="catalog-main__photo-small" src="img/products/chicken-small.jpg" srcset="img/products/chicken-small@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом курицы">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -82,7 +98,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/chicken-large.png 1x, img/products/chicken-large@2x.png 2x">
-                  <img src="img/products/chicken.jpg" srcset="img/products/chicken@2x.png 2x" alt="Упаковка питания Cat Energy Pro 1000 грамм со вкусом курицы">
+                  <img class="catalog-main__photo-large" src="img/products/chicken.jpg" srcset="img/products/chicken@2x.png 2x" alt="Упаковка питания Cat Energy Pro 1000 грамм со вкусом курицы">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -112,7 +128,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/fish-medium.png 1x, img/products/fish-medium@2x.png 2x">
-                  <img src="img/products/fish-small.jpg" srcset="img/products/fish-small@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом рыбы">
+                  <img class="catalog-main__photo-small" src="img/products/fish-small.png" srcset="img/products/fish-small@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом рыбы">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -142,7 +158,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/fish-large.png 1x, img/products/fish-large@2x.png 2x">
-                  <img src="img/products/fish.jpg" srcset="img/products/fish@2x.png 2x" alt="Упаковка питания Cat Energy Pro 1000 грамм со вкусом рыбы">
+                  <img class="catalog-main__photo-large" src="img/products/fish.jpg" srcset="img/products/fish@2x.png 2x" alt="Упаковка питания Cat Energy Pro 1000 грамм со вкусом рыбы">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -172,7 +188,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/buckwheat-medium.png 1x, img/products/buckwheat-medium@2x.png 2x">
-                  <img src="img/products/buckwheat-small.jpg" srcset="img/products/buckwheat-small@2x.png 2x" alt="Упаковка питания Cat Energy SLIM 500 грамм со вкусом гречки">
+                  <img class="catalog-main__photo-small" src="img/products/buckwheat-small.jpg" srcset="img/products/buckwheat-small@2x.png 2x" alt="Упаковка питания Cat Energy SLIM 500 грамм со вкусом гречки">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -202,7 +218,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/buckwheat-large.png 1x, img/products/buckwheat-large@2x.png 2x">
-                  <img src="img/products/buckwheat.jpg" srcset="img/products/buckwheat@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом гречки">
+                  <img class="catalog-main__photo-large" src="img/products/buckwheat.jpg" srcset="img/products/buckwheat@2x.png 2x" alt="Упаковка питания Cat Energy Pro 500 грамм со вкусом гречки">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -232,7 +248,7 @@
               <div class="catalog-main__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/products/rice-medium.png 1x, img/products/rice-medium@2x.png 2x">
-                  <img src="img/products/rice.jpg" srcset="img/products/rice@2x.png 2x" alt="Упаковка питания Cat Energy SLIM 500 грамм со вкусом риса">
+                  <img class="catalog-main__photo-small" src="img/products/rice.jpg" srcset="img/products/rice@2x.png 2x" alt="Упаковка питания Cat Energy SLIM 500 грамм со вкусом риса">
                 </picture>
               </div>
               <div class="catalog-main__product">
@@ -305,19 +321,19 @@
       </div>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__contacts page-footer__contacts--inner">
+      <section class="page-footer__contacts page-footer__contacts--inner page-footer__contacts--catalog">
         <h2 class="visually-hidden">Котактная информация</h2>
-        <div class="contacts">
-          <b class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</b>
-          <p class="contacts__text">ул. Большая<br>Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
+        <div class="contacts contacts__inner">
+          <b class="contacts__title contacts__title--inner">Приглашаем<br>к сотрудничеству<br>дилеров!</b>
+          <p class="contacts__text contacts__text--inner">ул. Большая<br>Конюшенная, д. 19/8<span>Санкт-Петербург</span></p>
         </div>
         <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605518234645!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
       <section class="page-footer__main">
         <h2 class="visually-hidden">Дополнительная информация</h2>
         <div class="page-footer__wrapper">
-          <a class="page-footer__name">
-            <img class="page-footer__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Название компании Кэт энерджи">
+          <a class="page-footer__name page-footer__name--inner" href="index.html">
+            <img class="page-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Название компании Кэт энерджи">
           </a>
           <div class="page-footer__social">
             <h3 class="visually-hidden">Социальные сети</h3>
