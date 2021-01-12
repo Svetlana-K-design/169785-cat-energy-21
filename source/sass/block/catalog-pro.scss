@@ -9,14 +9,14 @@
   top: 25px;
   width: 67px;
   height: 50px;
-  background: url("../img/icon/cat-strong.png") no-repeat;
+  background: url("../img/icon/cat-strong.svg") no-repeat;
 
   @media (min-width: 768px) {
     width: 268px;
     height: 200px;
     left: 412px;
     top: 91px;
-    background: url("../img/icon/cat-pro-medium.png") no-repeat;
+    background: url("../img/icon/cat-pro-large.svg") no-repeat;
   }
 
   @media (min-width: 1440px) {
@@ -24,7 +24,7 @@
     height: 100px;
     left: 33px;
     top: 45px;
-    background: url("../img/icon/cat-pro-large.png") no-repeat;
+    background: url("../img/icon/cat-pro-medium.svg") no-repeat;
   }
 }
 
