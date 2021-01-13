@@ -136,6 +136,11 @@ $background: #ffffff;
   margin-top: 39px;
   margin-bottom: 35px;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/icon/icon-gift.svg") no-repeat 50% 27%, url("../img/gift-cat@2x.jpg") no-repeat;
+    background-size: auto, contain;
+  }
+
   @media (min-width: 768px) {
     width: 708px;
     height: 200px;
@@ -144,6 +149,11 @@ $background: #ffffff;
     text-align: left;
     margin-top: 73px;
     margin-bottom: 76px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/icon/icon-gift.svg") no-repeat 12.5% 48%, url("../img/gift-cat-medium@2x.jpg") no-repeat;
+      background-size: auto, contain;
+    }
   }
 
   @media (min-width: 1440px) {
@@ -151,10 +161,15 @@ $background: #ffffff;
     height: 289px;
     text-align: center;
     color: $background;
-    background: url("../img/icon/icon-gift.svg") no-repeat 51% 27%, url("../img/gift-cat.jpg") no-repeat -13px 0;
+    background: url("../img/icon/icon-gift.svg") no-repeat 51% 27%, url("../img/gift-cat-large.jpg") no-repeat;
     background-color: $basic-green;
     margin-top: 173px;
     margin-bottom: 26px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/icon/icon-gift.svg") no-repeat 51% 27%, url("../img/gift-cat-large@2x.jpg") no-repeat;
+      background-size: auto, cover;
+    }
   }
 }
 

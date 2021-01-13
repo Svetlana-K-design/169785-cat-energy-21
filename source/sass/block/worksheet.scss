@@ -177,6 +177,20 @@
   }
 }
 
+.worksheet__input--error {
+  border: 1px solid $red-error;
+}
+
+.worksheet__input--email-error {
+  background: url("../img/icon/icon-email-error.svg") no-repeat 93%;
+  border: 1px solid $red-error;
+}
+
+.worksheet__input--phone-error {
+  background: url("../img/icon/icon-phone-error.svg") no-repeat 93%;
+  border: 1px solid $red-error;
+}
+
 .worksheet__weight {
   margin-top: -3px;
 
