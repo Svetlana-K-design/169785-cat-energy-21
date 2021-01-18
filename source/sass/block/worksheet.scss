@@ -527,7 +527,7 @@ label:hover::before {
   padding-left: 12px;
   color: $special-dark-gray;
   width: 94%;
-  min-height: 138px;
+  height: 138px;
   cursor: pointer;
 
   &:hover {
@@ -540,15 +540,16 @@ label:hover::before {
   }
 
   @media (min-width: 768px) {
-    width: 98%;
-    min-height: 162px;
+    width: 97.5%;
+    height: 162px;
     font-size: 20px;
     line-height: 30px;
     padding-left: 16px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     padding-left: 18px;
+    width: 98%;
   }
 }
 
