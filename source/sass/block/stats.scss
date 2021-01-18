@@ -252,8 +252,13 @@ $basic-gray: #f2f2f2;
 
 .stats__cat-image {
   width: 311px;
-  height: 232px;
+  height: 100%;
   margin: 0 auto;
+  margin-top: -8px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -263,7 +268,7 @@ $basic-gray: #f2f2f2;
     .stats__cat-image--before {
       width: 354px;
       height: 620px;
-      margin-top: -9px;
+      margin-top: -7px;
     }
   }
 }

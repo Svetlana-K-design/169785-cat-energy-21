@@ -9,8 +9,12 @@
     padding-bottom: 4px;
   }
 
-  &:hover:not(:first-child) path {
-    fill: $basic-green;
+  .copyright__link-icon {
+    fill: $icon-gray;
+
+    &:hover {
+      fill: $basic-green;
+    }
   }
 
   &:active {
