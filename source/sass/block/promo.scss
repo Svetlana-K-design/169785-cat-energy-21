@@ -6,8 +6,6 @@ $background: #ffffff;
   position: relative;
   text-align: center;
   color: $background;
-  background: url("../img/background-cat.jpg") no-repeat;
-  background-position: top right;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/background-cat@2x.jpg") no-repeat;
@@ -24,6 +22,7 @@ $background: #ffffff;
   }
 
   @media (min-width: 1440px) {
+    max-width: 1440px;
     min-height: 470px;
     position: relative;
     margin-left: 190px;
@@ -33,19 +32,21 @@ $background: #ffffff;
   .promo__wrapper {
     min-height: 302px;
     box-sizing: border-box;
-    background-color: $background-promo;
     box-shadow: $shadow-promo;
     padding-top: 7px;
+    background: linear-gradient($background-promo, $background-promo) top/ 100% 302px, url("../img/background-cat.jpg") top/ cover;
+    background-repeat: no-repeat;
 
     @media (min-width: 768px) {
-      background-color: $background;
+      background: $background;
       color: $color-basic;
       box-shadow: none;
       text-align: left;
     }
 
     @media (min-width: 1440px) {
-      width: 500px;
+      max-width: 1440px;
+      background: none;
     }
 
     .promo__title {
@@ -106,7 +107,7 @@ $background: #ffffff;
   height: 270px;
   position: absolute;
   bottom: 43px;
-  left: 20px;
+  margin: 0 -140px;
 
   @media (min-width: 768px) {
     min-width: 709px;
@@ -115,14 +116,16 @@ $background: #ffffff;
     z-index: 0;
     top: 99px;
     left: -87px;
+    margin: 0;
   }
 
   @media (min-width: 1440px) {
     min-width: 552px;
     height: auto;
     position: absolute;
-    left: 368px;
+    left: 60.1%;
     top: -129px;
+    z-index: 0;
   }
 }
 

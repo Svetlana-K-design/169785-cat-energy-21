@@ -1,6 +1,15 @@
 $basic-gray: #f2f2f2;
 $special-dark-gray: #444444;
 
+.product-pitch {
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 380px;
+    margin: 0 80px;
+  }
+}
+
 .product-pitch__wrapper {
   min-height: 267px;
   background-color: $basic-gray;
@@ -17,19 +26,11 @@ $special-dark-gray: #444444;
   }
 
   @media (min-width: 1440px) {
-    width: 570px;
+    width: 44.5%;
+    margin: 0 30px;
     margin-top: 38px;
     margin-bottom: 27px;
-    padding-right: 27px;
-  }
-}
-
-.product-pitch {
-  @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
-    min-height: 380px;
-    margin: 0 80px;
+    padding-right: 0;
   }
 }
 
@@ -77,6 +78,7 @@ $special-dark-gray: #444444;
 
   @media (min-width: 1440px) {
     margin-bottom: 33px;
+    padding-right: 41px;
   }
 }
 

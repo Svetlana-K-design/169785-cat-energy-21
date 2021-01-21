@@ -27,23 +27,41 @@ $background-promo: rgba(104, 183, 56, 0.85);
       max-width: 1440px;
       height: 100%;
       margin: 0 auto;
+    }
+  }
+
+  .page__body-container-index {
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      min-width: 768px;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1440px) {
+      min-width: 1440px;
+      height: 100%;
+      margin: 0 auto;
       position: relative;
 
-      &--main::before {
+      &::before {
         content: "";
-        width: 50%;
+        position: absolute;
         height: 694px;
-        background-image: url("../img/rectangle.png"), url("../img/background-cat-large.jpg");
-        background-repeat: no-repeat;
+        width: 50%;
         top: -26px;
         right: 0;
+        display: flex;
+        background: linear-gradient($background-promo, $background-promo) top right, url("../img/background-cat-large.jpg") top right/ cover;
+        background-repeat: no-repeat;
         z-index: -1;
-        position: absolute;
 
         @media (min-resolution: 2dppx) {
-          background: url("../img/rectangle@2x.png"), url("../img/background-cat-large@2x.jpg");
+          background: linear-gradient($background-promo, $background-promo) top right, url("../img/background-cat-large.jpg") top right/ cover;
           background-repeat: no-repeat;
-          background-size: 100% 694px;
         }
       }
     }

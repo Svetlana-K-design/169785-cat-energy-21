@@ -12,19 +12,32 @@
   background: url("../img/icon/cat-strong.svg") no-repeat;
 
   @media (min-width: 768px) {
-    width: 268px;
-    height: 200px;
-    left: 412px;
-    top: 91px;
-    background: url("../img/icon/cat-pro-large.svg") no-repeat;
+    display: none;
   }
 
   @media (min-width: 1440px) {
+    display: block;
     width: 134px;
     height: 100px;
     left: 33px;
     top: 45px;
     background: url("../img/icon/cat-pro-medium.svg") no-repeat;
+  }
+}
+
+.catalog-pro__title::after {
+  @media (min-width: 768px) {
+    content: "";
+    position: absolute;
+    width: 268px;
+    height: 200px;
+    right: 28px;
+    top: 91px;
+    background: url("../img/icon/cat-pro-large.svg") no-repeat;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
   }
 }
 
