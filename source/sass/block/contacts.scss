@@ -9,8 +9,8 @@
     margin: 42px 73px;
 
     &__inner {
-      margin: 43px 71px;
-      padding-top: 43px;
+      margin: 0 71px;
+      padding: 43px 0;
     }
   }
 
@@ -23,6 +23,28 @@
     padding: 61px 85px 51px 76px;
     left: 37px;
     top: 55px;
+
+    &__inner {
+      left: 39px;
+      top: 95px;
+    }
+  }
+}
+
+.contacts__inner--form {
+  @media (min-width: 768px) {
+    margin: 43px 71px 0;
+    padding: 43px 0;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    padding: 61px 85px 51px 76px;
+    margin: 0;
+    left: 110px;
+    top: 95px;
   }
 }
 

@@ -1,11 +1,9 @@
-$color-basic: #111111;
-$background: #ffffff;
-
 .promo {
   min-height: 480px;
   position: relative;
   text-align: center;
   color: $background;
+  margin-top: 14px;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/background-cat@2x.jpg") no-repeat;
@@ -28,75 +26,71 @@ $background: #ffffff;
     margin-left: 190px;
     margin-top: 138px;
   }
+}
 
-  .promo__wrapper {
-    min-height: 302px;
-    box-sizing: border-box;
-    box-shadow: $shadow-promo;
-    padding-top: 7px;
-    background: linear-gradient($background-promo, $background-promo) top/ 100% 302px, url("../img/background-cat.jpg") top/ cover;
-    background-repeat: no-repeat;
+.promo__wrapper {
+  min-height: 302px;
+  box-sizing: border-box;
+  box-shadow: $shadow-promo;
+  padding-top: 7px;
+  background: linear-gradient($background-promo, $background-promo) top/ 100% 302px, url("../img/background-cat.jpg") top/ cover;
+  background-repeat: no-repeat;
 
-    @media (min-width: 768px) {
-      background: $background;
-      color: $color-basic;
-      box-shadow: none;
-      text-align: left;
-    }
+  @media (min-width: 768px) {
+    background: $background;
+    color: $color-basic;
+    box-shadow: none;
+    text-align: left;
+  }
 
-    @media (min-width: 1440px) {
-      max-width: 1440px;
-      background: none;
-    }
-
-    .promo__title {
-      font-size: 36px;
-      line-height: 36px;
-      font-weight: 400;
-      margin-bottom: 25px;
-      margin-top: 20px;
-
-      @media (min-width: 768px) {
-        font-size: 60px;
-        line-height: 60px;
-        margin-top: -108px;
-        margin-bottom: 40px;
-      }
-
-      span {
-        @media (min-width: 768px) {
-          display: block;
-        }
-      }
-
-      @media (min-width: 1440px) {
-        margin-top: -53px;
-      }
-    }
-
-    .promo__slogan {
-      font-size: 14px;
-      line-height: 14px;
-      font-weight: 400;
-      text-transform: uppercase;
-
-      @media (min-width: 768px) {
-        font-size: 20px;
-        line-height: 20px;
-      }
-    }
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    background: none;
   }
 }
 
-@media (min-width: 768px) {
-  .promo__food {
+.promo__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: -108px;
+    margin-bottom: 40px;
+
+    span {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: -53px;
+  }
+}
+
+.promo__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__food {
+  @media (min-width: 768px) {
     width: 709px;
     height: 609px;
   }
-}
 
-@media (min-width: 1440px) {
-  .promo__food {
+  @media (min-width: 1440px) {
     width: 552px;
     height: 499px;
   }

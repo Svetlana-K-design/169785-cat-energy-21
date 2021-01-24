@@ -1,6 +1,3 @@
-$background: #ffffff;
-$color-basic: #111111;
-
 @mixin button-text {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -30,7 +27,7 @@ $color-basic: #111111;
   }
 }
 
-.button__catalog-main--catalog {
+.button__catalog-main {
   @include button-text;
   display: inline-block;
   box-sizing: border-box;
