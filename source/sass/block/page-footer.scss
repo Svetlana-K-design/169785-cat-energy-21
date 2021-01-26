@@ -75,3 +75,42 @@
 .page-footer__contacts--inner {
   background-color: $basic-gray;
 }
+
+.page-footer__map {
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 400px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 100%;
+    height: 400px;
+  }
+}
+
+.page-footer__map--nojs {
+  background: url("../img/location-small.jpg") no-repeat center/ cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/location-small@2x.jpg") no-repeat center/ cover;
+  }
+
+  @media (min-width: 768px) {
+    background: url("../img/location-medium.jpg") no-repeat center/ cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/location-medium@2x.jpg") no-repeat center/ cover;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    background: url("../img/location-large.jpg") no-repeat center/ cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/location-large@2x.jpg") no-repeat center/ cover;
+    }
+  }
+}

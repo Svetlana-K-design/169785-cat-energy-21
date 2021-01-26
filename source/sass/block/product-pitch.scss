@@ -2,6 +2,7 @@
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     min-height: 380px;
     margin: 0 80px;
   }
@@ -18,16 +19,14 @@
   @media (min-width: 768px) {
     min-height: 372px;
     margin: 15px 30px;
-    padding-left: 52px;
-    padding-right: 279px;
+    padding: 0 279px 30px 52px;
   }
 
   @media (min-width: 1440px) {
     width: 44.5%;
-    margin: 0 30px;
-    margin-top: 38px;
-    margin-bottom: 27px;
+    margin: 36px 30px 27px;
     padding-right: 0;
+    min-height: 374px;
   }
 }
 

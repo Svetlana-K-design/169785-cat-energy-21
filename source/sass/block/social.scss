@@ -45,17 +45,18 @@
 .social__link-icon {
   fill: $icon-gray;
 
+  &:hover {
+    fill: $basic-green;
+  }
+
   &--fb {
     fill: none;
     stroke: $icon-gray;
 
     &:hover {
+      fill: none;
       stroke: $basic-green;
     }
-  }
-
-  &:hover {
-    fill: $basic-green;
   }
 }
 

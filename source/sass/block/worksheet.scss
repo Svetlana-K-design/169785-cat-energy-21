@@ -23,11 +23,28 @@
   @include label-text;
 }
 
+.worksheet__input::placeholder,
+.worksheet__textarea::placeholder {
+  color: $special-dark-gray;
+  opacity: 1;
+}
+
+.worksheet__input:-moz-placeholder {
+  color: $special-dark-gray;
+}
+
 .worksheet__mail {
   margin-top: 19px;
 
   @media (min-width: 1440px) {
     margin-right: 78px;
+    width: 47%;
+  }
+}
+
+.worksheet__phone {
+  @media (min-width: 1440px) {
+    width: 46.5%;
   }
 }
 
@@ -56,7 +73,7 @@
   }
 
   &:focus {
-    border: 1px solid $special-dark-gray;
+    border: 2px solid $special-dark-gray;
     outline: none;
   }
 
@@ -106,7 +123,7 @@
 
     &:disabled {
       background: url("../img/icon/icon-phone-disabled.svg") no-repeat 93%;
-      border: 1px solid $special-dark-gray;
+      border: 2px solid $special-dark-gray;
     }
 
     @media (min-width: 768px) {
@@ -151,7 +168,7 @@
 
     &:disabled {
       background: url("../img/icon/icon-email-disabled.svg") no-repeat 93%;
-      border: 1px solid $special-dark-gray;
+      border: 2px solid $special-dark-gray;
     }
 
     @media (min-width: 768px) {
@@ -178,17 +195,17 @@
 }
 
 .worksheet__input--error {
-  border: 1px solid $red-error;
+  border: 2px solid $red-error;
 }
 
 .worksheet__input--email-error {
   background: url("../img/icon/icon-email-error.svg") no-repeat 93%;
-  border: 1px solid $red-error;
+  border: 2px solid $red-error;
 }
 
 .worksheet__input--phone-error {
   background: url("../img/icon/icon-phone-error.svg") no-repeat 93%;
-  border: 1px solid $red-error;
+  border: 2px solid $red-error;
 }
 
 .worksheet__weight {
@@ -209,10 +226,14 @@
   margin-top: 30px;
 
   @media (min-width: 768px) {
-    width: 99%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: 1440px) {
+    justify-content: stretch;
   }
 }
 
@@ -226,12 +247,19 @@
 
   &--catalog-extra {
     @media (min-width: 768px) {
-      width: 44%;
+      width: 45%;
       padding-bottom: 42px;
     }
 
     @media (min-width: 1440px) {
-      width: 19%;
+      width: 25%;
+      margin-right: 21px;
+      height: 100%;
+
+      &:nth-child(4n) {
+        width: 19%;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -239,7 +267,6 @@
 .worksheet__label {
   display: block;
   cursor: pointer;
-  user-select: none;
 
   &--weight {
     margin-top: -7px;
@@ -300,13 +327,17 @@
   }
 }
 
-label:hover::before {
+.worksheet__input-radio:hover + label::before {
   border: 1px solid $light-valid-gray;
 }
 
 .worksheet__input-radio:disabled + label,
 .worksheet__input-checkbox:disabled + label {
   opacity: 0.3;
+}
+
+.worksheet__input-radio:focus + label::before {
+  border: 1px solid $special-dark-gray;
 }
 
 .worksheet__input-radio:checked + label::after {
@@ -349,7 +380,7 @@ label:hover::before {
     position: absolute;
     right: -20px;
     top: 17px;
-    width: 99px;
+    min-width: 99px;
     height: 2px;
     background-color: $basic-green;
   }
@@ -365,7 +396,7 @@ label:hover::before {
       position: absolute;
       left: -68px;
       top: 22px;
-      width: 6%;
+      min-width: 6%;
       height: 2px;
       background-color: $basic-green;
     }
@@ -376,7 +407,7 @@ label:hover::before {
       position: absolute;
       right: -185px;
       top: 22px;
-      width: 28%;
+      min-width: 28%;
       height: 2px;
       background-color: $basic-green;
     }
@@ -386,13 +417,13 @@ label:hover::before {
     &::before {
       left: -108px;
       top: 20px;
-      width: 70px;
+      min-width: 70px;
     }
 
     &::after {
       left: 554px;
       top: 20px;
-      width: 778px;
+      min-width: 778px;
     }
   }
 }
@@ -535,7 +566,7 @@ label:hover::before {
   }
 
   &:focus {
-    border: 1px solid $special-dark-gray;
+    border: 2px solid $special-dark-gray;
     outline: none;
   }
 
@@ -562,6 +593,9 @@ label:hover::before {
     width: 47%;
     min-height: 200px;
     margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -597,6 +631,7 @@ label:hover::before {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -690,8 +725,12 @@ label:hover::before {
   }
 }
 
-.worksheet__label--checkbox:hover::before {
+.worksheet__input-checkbox:hover + label::before {
   border: 1px solid $light-valid-gray;
+}
+
+.worksheet__input-checkbox:focus + label::before {
+  border: 1px solid $special-dark-gray;
 }
 
 .worksheet__input-checkbox:checked + label::after {

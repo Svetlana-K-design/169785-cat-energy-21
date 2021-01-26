@@ -1,5 +1,9 @@
 .main-nav {
   position: relative;
+
+  @media (min-width: 1440px) {
+    width: 50%;
+  }
 }
 
 .main-nav__wrapper {
@@ -91,4 +95,8 @@
 
 .main-nav--opened .main-nav__toggle::after {
   transform: rotate(-45deg);
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }

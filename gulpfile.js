@@ -72,7 +72,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.createWebp = createWebp;
@@ -95,6 +95,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
+    "source/css/style.css",
   ], {
     base: "source"
   })
