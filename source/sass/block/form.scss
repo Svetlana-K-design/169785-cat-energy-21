@@ -1,6 +1,6 @@
 .form {
-  width: 280px;
-  margin: 0 auto;
+  min-width: 280px;
+  margin: 0 20px;
   padding-bottom: 17px;
 
   fieldset {
@@ -13,13 +13,13 @@
   }
 
   @media (min-width: 768px) {
-    width: 628px;
-    margin: 0 70px;
+    min-width: 628px;
+    margin: 0 30px;
     position: relative;
   }
 
   @media (min-width: 1440px) {
-    width: 1220px;
+    min-width: 1220px;
     margin: 0 110px;
     position: relative;
   }

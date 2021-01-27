@@ -17,8 +17,8 @@
 
     &::after {
       content: "";
-      width: auto;
       display: block;
+      width: auto;
       border-bottom: dotted 1px $black-basic;
       opacity: 0.24;
     }
@@ -27,9 +27,6 @@
 
 .slider__toggle:hover {
   &::after {
-    content: "";
-    display: block;
-    width: auto;
     border-bottom: solid 1px $black-basic;
     opacity: 0.4;
   }
@@ -40,7 +37,7 @@
   decoration: none;
 
   &::after {
-    display: none;
+    border-color: transparent;
   }
 }
 

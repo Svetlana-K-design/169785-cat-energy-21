@@ -62,6 +62,7 @@
   color: $special-dark-gray;
   cursor: pointer;
 
+
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
@@ -73,43 +74,37 @@
   }
 
   &:focus {
-    border: 2px solid $special-dark-gray;
-    outline: none;
+    outline: 2px solid $special-dark-gray;
+    border-color: transparent;
   }
 
   &--name {
-    width: 228px;
+    width: 71.25vw;
 
     @media (min-width: 768px) {
-      width: 566px;
+      width: 73.5vw;
       padding-left: 20px;
     }
 
     @media (min-width: 1440px) {
-      width: 505px;
+      width: 35.1vw;
       margin-right: 3px;
     }
   }
 
-  &--weight,
-  &--phone {
-    width: 204px;
+  &--weight {
+    width: 63.7vw;
     margin-left: 9px;
 
     @media (min-width: 768px) {
-      width: 535px;
+      width: 69.6vw;
       margin-left: 14px;
-    }
-  }
-
-  &--weight {
-    @media (min-width: 768px) {
       padding-left: 20px;
       margin-top: 3px;
     }
 
     @media (min-width: 1440px) {
-      width: 475px;
+      width: 33vw;
       margin-top: 0;
       margin-bottom: 3px;
       margin-right: 3px;
@@ -118,17 +113,20 @@
   }
 
   &--phone {
-    background: url("../img/icon/icon-phone.svg") no-repeat 93% 40%;
+    width: 63.7vw;
+    background: url("../img/icon/icon-phone.svg") no-repeat 93% 40%/ auto;
     padding-bottom: 5px;
 
     &:disabled {
-      background: url("../img/icon/icon-phone-disabled.svg") no-repeat 93%;
+      background: url("../img/icon/icon-phone-disabled.svg") no-repeat 93%/ auto;
       border: 2px solid $special-dark-gray;
     }
 
     @media (min-width: 768px) {
+      width: 69.6vw;
       padding-left: 22px;
       background-position: 97%;
+      background-size: auto;
 
       &:disabled {
         background-position: 97%;
@@ -136,7 +134,7 @@
     }
 
     @media (min-width: 1440px) {
-      width: 470px;
+      width: 32.8vw;
       margin-top: -6px;
       padding-left: 17px;
       padding-top: 5px;
@@ -144,16 +142,16 @@
   }
 
   &--age {
-    width: 171px;
+    width: 53.4vw;
 
     @media (min-width: 768px) {
-      width: 496px;
+      width: 64.5vw;
       padding-left: 20px;
       margin-top: 4px;
     }
 
     @media (min-width: 1440px) {
-      width: 436px;
+      width: 30.2vw;
       margin-top: 0;
       margin-bottom: 3px;
       margin-right: 3px;
@@ -162,7 +160,7 @@
   }
 
   &--email {
-    width: 218px;
+    width: 68.1vw;
     background: url("../img/icon/icon-email.svg") no-repeat 93%;
     margin-top: -2px;
 
@@ -172,7 +170,7 @@
     }
 
     @media (min-width: 768px) {
-      width: 547px;
+      width: 71.2vw;
       margin-left: 20px;
       padding-left: 20px;
       background-position: 97% 55%;
@@ -183,7 +181,7 @@
     }
 
     @media (min-width: 1440px) {
-      width: 486px;
+      width: 34vw;
       margin-left: 0;
       background-position: 96% 49%;
 
@@ -370,6 +368,14 @@
   }
 }
 
+.worksheet__legend--contacts span {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
 .worksheet__legend--contacts {
   margin-bottom: 18px;
   position: relative;
@@ -378,9 +384,9 @@
     content: "";
     display: block;
     position: absolute;
-    right: -20px;
-    top: 17px;
-    min-width: 99px;
+    right: calc(100% + -94vw);
+    top: 23px;
+    width: calc(1% + 30.9vw);
     height: 2px;
     background-color: $basic-green;
   }
@@ -394,9 +400,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: -68px;
+      left: calc(4% - 50vw);
       top: 22px;
-      min-width: 6%;
+      width: calc(1% + 42vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -405,9 +411,9 @@
       content: "";
       display: block;
       position: absolute;
-      right: -185px;
+      right: calc(100% + -91vw);
       top: 22px;
-      min-width: 28%;
+      width: calc(1% + 18vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -415,15 +421,15 @@
 
   @media (min-width: 1440px) {
     &::before {
-      left: -108px;
+      left: calc(1% - 50vw);
       top: 20px;
-      min-width: 70px;
+      width: calc(1% + 46.6vw);
     }
 
     &::after {
-      left: 554px;
+      right: calc(100% + -92vw);
       top: 20px;
-      min-width: 778px;
+      width: calc(14% + 48.5vw);
     }
   }
 }
@@ -437,9 +443,9 @@
     content: "";
     display: block;
     position: absolute;
-    right: -179px;
+    right: calc(100% + -94vw);
     top: 16px;
-    width: 158px;
+    width: calc(1% + 49vw);
     height: 2px;
     background-color: $basic-green;
   }
@@ -451,9 +457,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: -67px;
+      left: calc(14% - 50vw);
       top: 20px;
-      width: 30px;
+      width: calc(1% + 42vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -462,9 +468,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: 222px;
+      right: calc(100% + -91vw);
       top: 20px;
-      width: 478px;
+      width: calc(1% + 62vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -474,15 +480,15 @@
     padding-left: 5px;
 
     &::before {
-      left: -105px;
+      left: calc(1% - 50vw);
       top: 20px;
-      width: 70px;
+      width: calc(1% + 47vw);
     }
 
     &::after {
-      left: 227px;
+      right: calc(100% + -92vw);
       top: 20px;
-      width: 1108px;
+      width: calc(100% + 63.5vw);
     }
   }
 }
@@ -496,9 +502,9 @@
     content: "";
     display: block;
     position: absolute;
-    right: -158px;
+    right: calc(100% + -94vw);
     top: 15px;
-    width: 136px;
+    width: calc(1% + 43vw);
     height: 2px;
     background-color: $basic-green;
   }
@@ -511,9 +517,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: -65px;
+      left: calc(14% - 50vw);
       top: 20px;
-      width: 30px;
+      width: calc(1% + 41vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -522,9 +528,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: 255px;
+      right: calc(100% + -91vw);
       top: 20px;
-      width: 446px;
+      width: calc(1% + 58vw);
       height: 2px;
       background-color: $basic-green;
     }
@@ -532,15 +538,15 @@
 
   @media (min-width: 1440px) {
     &::before {
-      left: -108px;
+      left: calc(1% - 50vw);
       top: 19px;
-      width: 70px;
+      width: calc(1% + 47vw);
     }
 
     &::after {
-      left: 254px;
+      right: calc(100% + -92vw);
       top: 20px;
-      width: 1078px;
+      width: calc(100% + 59.5vw);
     }
   }
 }
@@ -566,8 +572,7 @@
   }
 
   &:focus {
-    border: 2px solid $special-dark-gray;
-    outline: none;
+    outline: 2px solid $special-dark-gray;
   }
 
   @media (min-width: 768px) {
@@ -638,26 +643,26 @@
 .worksheet__programm {
   position: relative;
   margin-top: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 
   &::before {
     content: "";
     display: block;
-    width: 320px;
+    width: 100vw;
     height: 1px;
     background-color: $light-gray-border;
     position: absolute;
-    left: -20px;
+    left: calc(50% + -50vw);
   }
 
   &::after {
     content: "";
     display: block;
-    width: 320px;
+    width: 100vw;
     height: 1px;
     background-color: $light-gray-border;
     position: absolute;
-    left: -20px;
+    left: calc(50% + -50vw);
     bottom: 15px;
   }
 

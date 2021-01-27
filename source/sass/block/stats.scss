@@ -21,7 +21,7 @@
 
   @media (min-width: 1440px) {
     &::after {
-      background: linear-gradient(to right, $basic-gray 80%, $light-gray-stats 20%);
+      background: linear-gradient(to right, $basic-gray 90%, $light-gray-stats 10%);
     }
   }
 }
